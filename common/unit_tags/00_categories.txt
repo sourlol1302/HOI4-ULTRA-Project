@@ -25,6 +25,7 @@ sub_unit_categories = {
 	category_support_tanks
 	category_td
 	category_at
+	category_assault
 	hfighter_bomber
 	category_maritime
 	category_scout_plane
