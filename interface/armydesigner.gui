@@ -3,12 +3,12 @@ guiTypes = {
 		name = army_designer_window
 	
 		buttonType = {
-				name = "open_army_designer_button"
-				position = { x = 102 y = 55 }
-				quadTextureSprite ="GFX_army_designer_button"
-				buttonFont = "hoi_18mbs"
-				buttonText = "Army Designer"
-				clicksound = click_default
+			name = "open_army_designer_button"
+			position = { x = 102 y = 55 }
+			quadTextureSprite ="GFX_army_designer_button"
+			buttonFont = "hoi_18mbs"
+			buttonText = "Army Designer"
+			clicksound = click_default
 		}
 	}
 	containerWindowType = {
@@ -86,237 +86,329 @@ guiTypes = {
 			name = "Background"
 			spriteType = "GFX_army_designer_department_logistics_bg"
 		}
+		instantTextBoxType = {
+			name = weapon_transports_text
+			text = "Weapons Transports"
+			font = "hoi_16mbs"
+			format = center
+			position = { x = 10 y = 7}
+		}
+
+		@NONE_Y = 62
+		@ONLY_VERY_HEAVY_Y = 96
+		@ALL_VERY_HEAVY_Y = 129
+		@HEAVY_AND_LIGHT_Y = 162
+		@ALL_Y = 195
 		
+		@LIGHT_TRANSPORT_X = 200
+		@HEAVY_TRANSPORT_X = 420
+		@MOT_TRANSPORT_X = 640
+		@SUP_TRANSPORT_X = 860
+
+		@LIGHT_TRANSPORT_HEADER_TEXT_X = 185
+		@HEAVY_TRANSPORT_HEADER_TEXT_X = 405
+		@MOT_TRANSPORT_HEADER_TEXT_X = 625
+		@SUP_TRANSPORT_HEADER_TEXT_X = 845
+		@HEADER_TEXT_Y = 40
+		
+		instantTextBoxType = {
+			name = light_weapon_transports_text
+			text = "Light Forces"
+			font = "hoi_16mbs"
+			format = center
+			position = { x = @LIGHT_TRANSPORT_HEADER_TEXT_X y = @HEADER_TEXT_Y }
+		}
+		instantTextBoxType = {
+			name = heavy_weapon_transports_text
+			text = "Heavy Forces"
+			font = "hoi_16mbs"
+			format = center
+			position = { x = @HEAVY_TRANSPORT_HEADER_TEXT_X y = @HEADER_TEXT_Y }
+		}
+		instantTextBoxType = {
+			name = mot_weapon_transports_text
+			text = "Motorised Forces"
+			font = "hoi_16mbs"
+			format = center
+			position = { x = @MOT_TRANSPORT_HEADER_TEXT_X y = @HEADER_TEXT_Y }
+		}
+		instantTextBoxType = {
+			name = sup_weapon_transports_text
+			text = "Support Units"
+			font = "hoi_16mbs"
+			format = center
+			position = { x = @SUP_TRANSPORT_HEADER_TEXT_X y = @HEADER_TEXT_Y }
+		}
+		buttonType = {
+			name = "light_weapon_transports_none_button"
+			position = { x = @LIGHT_TRANSPORT_X y = @NONE_Y }
+			quadTextureSprite ="GFX_army_designer_button_green"
+			buttonText = "None"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "light_weapon_transports_only_very_heavy_button"
+			position = { x = @LIGHT_TRANSPORT_X y = @ONLY_VERY_HEAVY_Y }
+			quadTextureSprite ="GFX_army_designer_button_green"
+			buttonText = "Very Heavy Weapons"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "light_weapon_transports_all_very_heavy_button"
+			position = { x = @LIGHT_TRANSPORT_X y = @ALL_VERY_HEAVY_Y }
+			quadTextureSprite ="GFX_army_designer_button_green"
+			buttonText = "All Heavy Weapons"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "light_weapon_transports_heavy_and_light_button"
+			position = { x = @LIGHT_TRANSPORT_X y = @HEAVY_AND_LIGHT_Y }
+			quadTextureSprite ="GFX_army_designer_button_green"
+			buttonText = "Heavy & Light Weapons"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "light_weapon_transports_all_button"
+			position = { x = @LIGHT_TRANSPORT_X y = @ALL_Y }
+			quadTextureSprite ="GFX_army_designer_button_green"
+			buttonText = "All"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "heavy_weapon_transports_none_button"
+			position = { x = @HEAVY_TRANSPORT_X y = @NONE_Y }
+			quadTextureSprite ="GFX_army_designer_button_green"
+			buttonText = "None"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "heavy_weapon_transports_only_very_heavy_button"
+			position = { x = @HEAVY_TRANSPORT_X y = @ONLY_VERY_HEAVY_Y }
+			quadTextureSprite ="GFX_army_designer_button_green"
+			buttonText = "Very Heavy Weapons"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "heavy_weapon_transports_all_very_heavy_button"
+			position = { x = @HEAVY_TRANSPORT_X y = @ALL_VERY_HEAVY_Y }
+			quadTextureSprite ="GFX_army_designer_button_green"
+			buttonText = "All Heavy Weapons"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "heavy_weapon_transports_heavy_and_light_button"
+			position = { x = @HEAVY_TRANSPORT_X y = @HEAVY_AND_LIGHT_Y }
+			quadTextureSprite ="GFX_army_designer_button_green"
+			buttonText = "Heavy & Light Weapons"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "heavy_weapon_transports_all_button"
+			position = { x = @HEAVY_TRANSPORT_X y = @ALL_Y }
+			quadTextureSprite ="GFX_army_designer_button_green"
+			buttonText = "All"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+		}
+
+		
+		buttonType = {
+			name = "mot_weapon_transports_none_button"
+			position = { x = @MOT_TRANSPORT_X y = @NONE_Y }
+			quadTextureSprite ="GFX_army_designer_button_green"
+			buttonText = "None"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "mot_weapon_transports_only_very_heavy_button"
+			position = { x = @MOT_TRANSPORT_X y = @ONLY_VERY_HEAVY_Y }
+			quadTextureSprite ="GFX_army_designer_button_green"
+			buttonText = "Very Heavy Weapons"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "mot_weapon_transports_all_very_heavy_button"
+			position = { x = @MOT_TRANSPORT_X y = @ALL_VERY_HEAVY_Y }
+			quadTextureSprite ="GFX_army_designer_button_green"
+			buttonText = "All Heavy Weapons"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "mot_weapon_transports_heavy_and_light_button"
+			position = { x = @MOT_TRANSPORT_X y = @HEAVY_AND_LIGHT_Y }
+			quadTextureSprite ="GFX_army_designer_button_green"
+			buttonText = "Heavy & Light Weapons"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "mot_weapon_transports_all_button"
+			position = { x = @MOT_TRANSPORT_X y = @ALL_Y }
+			quadTextureSprite ="GFX_army_designer_button_green"
+			buttonText = "All"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+		}
+
+		
+		buttonType = {
+			name = "sup_weapon_transports_none_button"
+			position = { x = @SUP_TRANSPORT_X y = @NONE_Y }
+			quadTextureSprite ="GFX_army_designer_button_green"
+			buttonText = "None"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "sup_weapon_transports_only_very_heavy_button"
+			position = { x = @SUP_TRANSPORT_X y = @ONLY_VERY_HEAVY_Y }
+			quadTextureSprite ="GFX_army_designer_button_green"
+			buttonText = "Very Heavy Weapons"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "sup_weapon_transports_all_very_heavy_button"
+			position = { x = @SUP_TRANSPORT_X y = @ALL_VERY_HEAVY_Y }
+			quadTextureSprite ="GFX_army_designer_button_green"
+			buttonText = "All Heavy Weapons"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "sup_weapon_transports_heavy_and_light_button"
+			position = { x = @SUP_TRANSPORT_X y = @HEAVY_AND_LIGHT_Y }
+			quadTextureSprite ="GFX_army_designer_button_green"
+			buttonText = "Heavy & Light Weapons"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "sup_weapon_transports_all_button"
+			position = { x = @SUP_TRANSPORT_X y = @ALL_Y }
+			quadTextureSprite ="GFX_army_designer_button_green"
+			buttonText = "All"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+		}
+
+		@LIGHT_X = 271
+		@LIGHT_X_TXT = 184
+		@HEAVY_X = 491
+		@HEAVY_X_TXT = 404
+		@MOT_X = 712
+		@MOT_X_TXT = 625
+		@SUP_X = 931
+		@SUP_X_TXT = 844
+		@INCREASE_Y = 250
+		@DECREASE_Y = 300
+		@TEXT_Y = 279
+
 		iconType = {
-			name = "Logistics Icon"
+			name = supply_icon
 			spriteType = "GFX_army_designer_logistics"
-			position = { x = 165 y = -18 }
+			position = { x = 13 y = 254 }
 		}
-		
+
+		instantTextBoxType = {
+			name = supply_text
+			text = "Supply Motorisation"
+			font = "hoi_16mbs"
+			format = left
+			position = { x = 80 y = @TEXT_Y }
+		}
+
 		buttonType = {
-				name = "increase_logistics_button"
-				position = { x = 25 y = 116 }
-				quadTextureSprite ="GFX_army_designer_button_green"
-				buttonFont = "hoi_18mbs"
-				buttonText = INCREASE_LOGISTICS
-				clicksound = click_default
+			name = "increase_light_logistics_button"
+			position = { x = @LIGHT_X y = @INCREASE_Y }
+			quadTextureSprite ="GFX_zoom_in"
+			clicksound = click_default
 		}
-		
 		buttonType = {
-				name = "decrease_logistics_button"
-				position = { x = 25 y = 166 }
-				quadTextureSprite ="GFX_army_designer_button_red"
-				buttonFont = "hoi_18mbs"
-				buttonText = DECREASE_LOGISTICS
-				clicksound = click_default
+			name = "decrease_light_logistics_button"
+			position = { x = @LIGHT_X y = @DECREASE_Y }
+			quadTextureSprite ="GFX_zoom_out"
+			clicksound = click_default
 		}
-		
 		instantTextboxType = {
-			name = "upgrade_branch_name"
-			position = { x = 35 y = 8 }
+			name = "light_logistics_into"
+			position = { x = @LIGHT_X_TXT y = @TEXT_Y }
 			font = "hoi_18mbs"
-			text = "Logistics and Supply"
-			format = left
-			maxWidth = 900	
+			text = "[?light_logistics_motorisation_level_display|0%%]"
+			format = center
 		}
-		instantTextboxType = {
-			name = "upgrade_branch_desc_1"
-			position = { x = 15 y = 32 }
-			font = "hoi_16mbs"
-			text = "In order to supply and equip our forces - we'll need to use either horses, trucks or a combination of both to bring material and supply to the frontline."
-			format = left
-			maxWidth = 900	
-		}
-		instantTextboxType = {
-			name = "upgrade_branch_desc_2"
-			position = { x = 15 y = 48 }
-			font = "hoi_16mbs"
-			text = "Higher allocations of trucks will allow us to support more troops in the field - at the cost of more manpower, trucks and fuel. Different battalions will use different amount of trucks relatively versus one another. "
-			format = left
-			maxWidth = 900	
-		}
-		instantTextboxType = {
-			name = "upgrade_branch_desc_3"
-			position = { x = 15 y = 80 }
-			font = "hoi_16mbs"
-			text = "We can mechanize and de-mechanize our troops as needed."
-			format = left
-			maxWidth = 900	
-		}
-		instantTextboxType = {
-			name = "upgrade_branch_info"
-			position = { x = 200 y = 112 }
-			font = "hoi_18mbs"
-			text = "Logistical Level: [?logistical_level|Y0]"
-			format = left
-			maxWidth = 900	
-		}
-		instantTextboxType = {
-			name = "upgrade_branch_stat_1"
-			position = { x = 200 y = 134 }
-			font = "hoi_16mbs"
-			text = "Trucks / Heavy Battalion: [?trucks_needed|-0]"
-			format = left
-			maxWidth = 900	
-		}
-		instantTextboxType = {
-			name = "upgrade_branch_stat_2"
-			position = { x = 200 y = 150 }
-			font = "hoi_16mbs"
-			text = "Trucks / Light Battalion: [?light_trucks_needed|-0]"
-			format = left
-			maxWidth = 900	
-		}
-		instantTextboxType = {
-			name = "upgrade_branch_stat_3"
-			position = { x = 200 y = 166 }
-			font = "hoi_16mbs"
-			text = "Trucks / Tank Battalion: [?tanks_trucks_needed|-0]"
-			format = left
-			maxWidth = 900	
-		}
-		instantTextboxType = {
-			name = "upgrade_branch_stat_4"
-			position = { x =200 y = 182 }
-			font = "hoi_16mbs"
-			text = "Supply Consumption: [?logistical_bonus|-0%]"
-			format = left
-			maxWidth = 900	
-		}
-		containerWindowType = {
-			name = "upgrades"
-			position = { x = 5 y = 45 }	
-			size = { width = 100%% height = 125 }
-			horizontalScrollbar = "bottom_horizontal_slider"
-	
-			gridboxtype = {
-				name = "upgrades_grid"
-				position = { x = 0 y = 0 }
-				size = { width = 100%% height = 100%% }
-				slotsize = { width = 205 height = 150 }
-				format = "UPPER_LEFT"
-			}
-		}
-	}
-	containerWindowType = {
-		name = "upgrade_army_department_signal_window"
-		position = { x = 15 y = 322 }
-		size = { width = 1040 height = 280 }
-	
-		background = {
-			name = "Background"
-			spriteType = "GFX_army_designer_department_signal_bg"
-		}
-		
-		iconType = {
-			name = "Signals Icon"
-			spriteType = "GFX_army_designer_signal"
-			position = { x = 200 y = -21 }
-		}
-		
+
 		buttonType = {
-				name = "increase_communications_button"
-				position = { x = 25 y = 116 }
-				quadTextureSprite ="GFX_army_designer_button_green"
-				buttonFont = "hoi_18mbs"
-				buttonText = INCREASE_SIGNALS
-				clicksound = click_default
+			name = "increase_heavy_logistics_button"
+			position = { x = @HEAVY_X y = @INCREASE_Y }
+			quadTextureSprite ="GFX_zoom_in"
+			clicksound = click_default
 		}
-		
 		buttonType = {
-				name = "decrease_communications_button"
-				position = { x = 25 y = 166 }
-				quadTextureSprite ="GFX_army_designer_button_red"
-				buttonFont = "hoi_18mbs"
-				buttonText = DECREASE_SIGNALS
-				clicksound = click_default
+			name = "decrease_heavy_logistics_button"
+			position = { x = @HEAVY_X y = @DECREASE_Y }
+			quadTextureSprite ="GFX_zoom_out"
+			clicksound = click_default
 		}
-		
 		instantTextboxType = {
-			name = "upgrade_branch_name"
-			position = { x = 20 y = 8 }
+			name = "heavy_logistics_into"
+			position = { x = @HEAVY_X_TXT y = @TEXT_Y }
 			font = "hoi_18mbs"
-			text = "Signals and Communication"
-			format = left
-			maxWidth = 900	
+			text = "[?heavy_logistics_motorisation_level_display|0%%]"
+			format = center
+		}
+
+		buttonType = {
+			name = "increase_mot_logistics_button"
+			position = { x = @MOT_X y = @INCREASE_Y }
+			quadTextureSprite ="GFX_zoom_in"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "decrease_mot_logistics_button"
+			position = { x = @MOT_X y = @DECREASE_Y }
+			quadTextureSprite ="GFX_zoom_out"
+			clicksound = click_default
 		}
 		instantTextboxType = {
-			name = "upgrade_branch_desc_1"
-			position = { x = 15 y = 32 }
-			font = "hoi_16mbs"
-			text = "In order to effectively coordinate and command our forces, we can dedicate more support equipment to improve combat performance."
-			format = left
-			maxWidth = 900	
-		}
-		instantTextboxType = {
-			name = "upgrade_branch_desc_2"
-			position = { x = 15 y = 48 }
-			font = "hoi_16mbs"
-			text = "Larger allocations of support equipment and manpower will result in higher planning speed, iniative and recovery."
-			format = left
-			maxWidth = 900	
-		}
-		instantTextboxType = {
-			name = "upgrade_branch_desc_3"
-			position = { x = 15 y = 64 }
-			font = "hoi_16mbs"
-			text = "We can allocate and deallocate support equipment as needed."
-			format = left
-			maxWidth = 900	
-		}
-		instantTextboxType = {
-			name = "upgrade_branch_info"
-			position = { x = 200 y = 112 }
+			name = "mot_logistics_into"
+			position = { x = @MOT_X_TXT y = @TEXT_Y }
 			font = "hoi_18mbs"
-			text = "Signals Level: [?signal_level|Y0]"
-			format = left
-			maxWidth = 900	
+			text = "[?mot_logistics_motorisation_level_display|0%%]"
+			format = center
+		}
+
+		buttonType = {
+			name = "increase_sup_logistics_button"
+			position = { x = @SUP_X y = @INCREASE_Y }
+			quadTextureSprite ="GFX_zoom_in"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "decrease_sup_logistics_button"
+			position = { x = @SUP_X y = @DECREASE_Y }
+			quadTextureSprite ="GFX_zoom_out"
+			clicksound = click_default
 		}
 		instantTextboxType = {
-			name = "upgrade_branch_stat_1"
-			position = { x = 200 y = 134 }
-			font = "hoi_16mbs"
-			text = "Support Eq. / HQ Company: [?support_needed|-0]"
-			format = left
-			maxWidth = 900	
-		}
-		instantTextboxType = {
-			name = "upgrade_branch_stat_2"
-			position = { x =200 y = 150 }
-			font = "hoi_16mbs"
-			text = "Division Recovery Rate: [?var_signal_bonus|+0%]"
-			format = left
-			maxWidth = 900	
-		}
-		instantTextboxType = {
-			name = "upgrade_branch_stat_3"
-			position = { x =200 y = 166 }
-			font = "hoi_16mbs"
-			text = "Planning Speed: [?var_planning_bonus|+0%]"
-			format = left
-			maxWidth = 900	
-		}
-		instantTextboxType = {
-			name = "upgrade_branch_stat_4"
-			position = { x =200 y = 182 }
-			font = "hoi_16mbs"
-			text = "Reconnaissance: [?var_recon_bonus|+0%]"
-			format = left
-			maxWidth = 900	
-		}
-		containerWindowType = {
-			name = "upgrades"
-			position = { x = 5 y = 45 }	
-			size = { width = 100%% height = 125 }
-			horizontalScrollbar = "bottom_horizontal_slider"
-	
-			gridboxtype = {
-				name = "upgrades_grid"
-				position = { x = 0 y = 0 }
-				size = { width = 100%% height = 100%% }
-				slotsize = { width = 205 height = 150 }
-				format = "UPPER_LEFT"
-			}
+			name = "sup_logistics_into"
+			position = { x = @SUP_X_TXT y = @TEXT_Y }
+			font = "hoi_18mbs"
+			text = "[?sup_logistics_motorisation_level_display|0%%]"
+			format = center
 		}
 	}
 }

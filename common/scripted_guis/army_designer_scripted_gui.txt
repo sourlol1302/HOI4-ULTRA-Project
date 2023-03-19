@@ -1,19 +1,11 @@
 scripted_gui = {
-
-	#state_buildings_window = {
-	#	window_name = "state_buildings_window"
-	#	context_type = selected_state_context
-	#	
-	#	
-	#	
-	#}
 	
 	army_designer_window = {
 		window_name = "army_designer_window"
 		context_type = player_context
 		parent_window_name = templatedeploymentwindow
 		visible = { 
-			always = no
+			always = yes
 		}
 		effects = {
 			open_army_designer_button_click = {
@@ -35,6 +27,11 @@ scripted_gui = {
 		}
 	}
 	
+	@CP_COST = -15
+	@CP_TRIGGER = 14
+	@MAX_LEVEL = 5
+	@MIN_LEVEL = 0
+
 	upgrade_army_department_logistics_window = {
 		window_name = "upgrade_army_department_logistics_window"
 		context_type = player_context
@@ -43,60 +40,270 @@ scripted_gui = {
 			check_variable = { show_army_designer_flag = 1 }
 		}
 		effects = {
-			increase_logistics_button_click = {
-				add_to_variable = { logistical_level = 1 }
-				#logistical_calculations = yes
+			light_weapon_transports_none_button_click = {
+				set_variable = { light_weapon_transports = 1 }
+				logistical_calculations = yes
 				on_daily_labour_calculations = yes
-				add_command_power = -25
+				add_command_power = @CP_COST
 			}
-			decrease_logistics_button_click = {
-				subtract_from_variable = { logistical_level = 1 }
-				#logistical_calculations = yes
+			light_weapon_transports_only_very_heavy_button_click = {
+				set_variable = { light_weapon_transports = 2 }
+				logistical_calculations = yes
 				on_daily_labour_calculations = yes
-				add_command_power = -25
+				add_command_power = @CP_COST
+			}
+			light_weapon_transports_all_very_heavy_button_click = {
+				set_variable = { light_weapon_transports = 3 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+			light_weapon_transports_heavy_and_light_button_click = {
+				set_variable = { light_weapon_transports = 4 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+			light_weapon_transports_all_button_click = {
+				set_variable = { light_weapon_transports = 5 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+			heavy_weapon_transports_none_button_click = {
+				set_variable = { heavy_weapon_transports = 1 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+			heavy_weapon_transports_only_very_heavy_button_click = {
+				set_variable = { heavy_weapon_transports = 2 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+			heavy_weapon_transports_all_very_heavy_button_click = {
+				set_variable = { heavy_weapon_transports = 3 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+			heavy_weapon_transports_heavy_and_light_button_click = {
+				set_variable = { heavy_weapon_transports = 4 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+			heavy_weapon_transports_all_button_click = {
+				set_variable = { heavy_weapon_transports = 5 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+			mot_weapon_transports_none_button_click = {
+				set_variable = { mot_weapon_transports = 1 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+			mot_weapon_transports_only_very_heavy_button_click = {
+				set_variable = { mot_weapon_transports = 2 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+			mot_weapon_transports_all_very_heavy_button_click = {
+				set_variable = { mot_weapon_transports = 3 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+			mot_weapon_transports_heavy_and_light_button_click = {
+				set_variable = { mot_weapon_transports = 4 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+			mot_weapon_transports_all_button_click = {
+				set_variable = { mot_weapon_transports = 5 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+			sup_weapon_transports_none_button_click = {
+				set_variable = { sup_weapon_transports = 1 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+			sup_weapon_transports_only_very_heavy_button_click = {
+				set_variable = { sup_weapon_transports = 2 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+			sup_weapon_transports_all_very_heavy_button_click = {
+				set_variable = { sup_weapon_transports = 3 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+			sup_weapon_transports_heavy_and_light_button_click = {
+				set_variable = { sup_weapon_transports = 4 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+			sup_weapon_transports_all_button_click = {
+				set_variable = { sup_weapon_transports = 5 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+
+			increase_light_logistics_motorisation_button_click = {
+				add_to_variable = { light_logistics_motorisation_level = 1 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+			decrease_light_logistics_motorisation_button_click = {
+				subtract_from_variable = { light_logistics_motorisation_level = 1 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+			increase_heavy_logistics_motorisation_button_click = {
+				add_to_variable = { heavy_logistics_motorisation_level = 1 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+			decrease_heavy_logistics_motorisation_button_click = {
+				subtract_from_variable = { heavy_logistics_motorisation_level = 1 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+			increase_mot_logistics_motorisation_button_click = {
+				add_to_variable = { mot_logistics_motorisation_level = 1 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+			decrease_mot_logistics_motorisation_button_click = {
+				subtract_from_variable = { mot_logistics_motorisation_level = 1 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+			increase_sup_logistics_motorisation_button_click = {
+				add_to_variable = { sup_logistics_motorisation_level = 1 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
+			}
+			decrease_sup_logistics_motorisation_button_click = {
+				subtract_from_variable = { sup_logistics_motorisation_level = 1 }
+				logistical_calculations = yes
+				on_daily_labour_calculations = yes
+				add_command_power = @CP_COST
 			}
 		}
 		triggers = {
-			increase_logistics_button_click_enabled = {
-				check_variable = { logistical_level < 10 }
-				check_variable = { command_power > 24 }
+			light_weapon_transports_none_button_click_enabled = {
+				check_variable = { command_power > @CP_TRIGGER }
 			}
-			decrease_logistics_button_click_enabled = {
-				check_variable = { logistical_level > 0 }
-				check_variable = { command_power > 24 }
+			light_weapon_transports_only_very_heavy_button_click_enabled = {
+				always = no
 			}
-		}
-	}
-	
-	upgrade_army_department_signal_window = {
-		window_name = "upgrade_army_department_signal_window"
-		context_type = player_context
-		parent_window_name = army_designer_details_window
-		visible = {
-			check_variable = { show_army_designer_flag = 1 }
-		}
-		effects = {
-			increase_communications_button_click = {
-				add_to_variable = { signal_level = 1 }
-				#logistical_calculations = yes
-				on_daily_labour_calculations = yes
-				add_command_power = -25
+			light_weapon_transports_all_very_heavy_button_click_enabled = {
+				always = no
 			}
-			decrease_communications_button_click = {
-				subtract_from_variable = { signal_level = 1 }
-				#logistical_calculations = yes
-				on_daily_labour_calculations = yes
-				add_command_power = -25
+			light_weapon_transports_heavy_and_light_button_click_enabled = {
+				always = no
 			}
-		}
-		triggers = {
-			increase_communications_button_click_enabled = {
-				check_variable = { signal_level < 10 }
-				check_variable = { command_power > 24 }
+			light_weapon_transports_all_button_click_enabled = {
+				check_variable = { command_power > @CP_TRIGGER }
 			}
-			decrease_communications_button_click_enabled = {
-				check_variable = { signal_level > 0 }
-				check_variable = { command_power > 24 }
+			heavy_weapon_transports_none_button_click_enabled = {
+				check_variable = { command_power > @CP_TRIGGER }
+			}
+			heavy_weapon_transports_only_very_heavy_button_click_enabled = {
+				check_variable = { command_power > @CP_TRIGGER }
+			}
+			heavy_weapon_transports_all_very_heavy_button_click_enabled = {
+				check_variable = { command_power > @CP_TRIGGER }
+			}
+			heavy_weapon_transports_heavy_and_light_button_click_enabled = {
+				check_variable = { command_power > @CP_TRIGGER }
+			}
+			heavy_weapon_transports_all_button_click_enabled = {
+				check_variable = { command_power > @CP_TRIGGER }
+			}
+			mot_weapon_transports_none_button_click_enabled = {
+				always = no
+			}
+			mot_weapon_transports_only_very_heavy_button_click_enabled = {
+				always = no
+			}
+			mot_weapon_transports_all_very_heavy_button_click_enabled = {
+				always = no
+			}
+			mot_weapon_transports_heavy_and_light_button_click_enabled = {
+				always = no
+			}
+			mot_weapon_transports_all_button_click_enabled = {
+				check_variable = { command_power > @CP_TRIGGER }
+			}
+			sup_weapon_transports_none_button_click_enabled = {
+				check_variable = { command_power > @CP_TRIGGER }
+			}
+			sup_weapon_transports_only_very_heavy_button_click_enabled = {
+				check_variable = { command_power > @CP_TRIGGER }
+			}
+			sup_weapon_transports_all_very_heavy_button_click_enabled = {
+				check_variable = { command_power > @CP_TRIGGER }
+			}
+			sup_weapon_transports_heavy_and_light_button_click_enabled = {
+				check_variable = { command_power > @CP_TRIGGER }
+			}
+			sup_weapon_transports_all_button_click_enabled = {
+				check_variable = { command_power > @CP_TRIGGER }
+			}
+
+
+			increase_light_logistics_motorisation_button_click_enabled = {
+				check_variable = { light_logistics_motorisation_level < @MAX_LEVEL }
+				check_variable = { command_power > @CP_TRIGGER }
+			}
+			decrease_light_logistics_motorisation_button_click_enabled = {
+				check_variable = { light_logistics_motorisation_level > @MIN_LEVEL }
+				check_variable = { command_power > @CP_TRIGGER }
+			}
+			increase_heavy_logistics_motorisation_button_click_enabled = {
+				check_variable = { heavy_logistics_motorisation_level < @MAX_LEVEL }
+				check_variable = { command_power > @CP_TRIGGER }
+			}
+			decrease_heavy_logistics_motorisation_button_click_enabled = {
+				check_variable = { heavy_logistics_motorisation_level > @MIN_LEVEL }
+				check_variable = { command_power > @CP_TRIGGER }
+			}
+			increase_mot_logistics_motorisation_button_click_enabled = {
+				check_variable = { mot_logistics_motorisation_level < @MAX_LEVEL }
+				check_variable = { command_power > @CP_TRIGGER }
+			}
+			decrease_mot_logistics_motorisation_button_click_enabled = {
+				check_variable = { mot_logistics_motorisation_level > @MIN_LEVEL }
+				check_variable = { command_power > @CP_TRIGGER }
+			}
+			increase_sup_logistics_motorisation_button_click_enabled = {
+				check_variable = { sup_logistics_motorisation_level < @MAX_LEVEL }
+				check_variable = { command_power > @CP_TRIGGER }
+			}
+			decrease_sup_logistics_motorisation_button_click_enabled = {
+				check_variable = { sup_logistics_motorisation_level > @MIN_LEVEL }
+				check_variable = { command_power > @CP_TRIGGER }
 			}
 		}
 	}
