@@ -4649,7 +4649,7 @@ technologies = {
 		folder = {
 			name = ger_armour_folder
 			position = {
-				x = 16
+				x = 17
 				y = @1934
 			}
 		}
@@ -4698,7 +4698,7 @@ technologies = {
 		folder = {
 			name = ger_armour_folder
 			position = {
-				x = 16
+				x = 17
 				y = @1942
 			}
 		}
@@ -4723,7 +4723,7 @@ technologies = {
 		folder = {
 			name = ger_armour_folder
 			position = {
-				x = 13
+				x = 14
 				y = @1945
 			}
 		}
@@ -4750,7 +4750,7 @@ technologies = {
 		folder = {
 			name = ger_armour_folder
 			position = {
-				x = 17
+				x = 18
 				y = @1943
 			}
 		}
@@ -4796,7 +4796,7 @@ technologies = {
 		folder = {
 			name = ger_armour_folder
 			position = {
-				x = 16
+				x = 17
 				y = @1944
 			}
 		}
@@ -4821,7 +4821,7 @@ technologies = {
 		folder = {
 			name = ger_armour_folder
 			position = {
-				x = 14
+				x = 15
 				y = @1944
 			}
 		}
@@ -4852,7 +4852,7 @@ technologies = {
 		folder = {
 			name = ger_armour_folder
 			position = {
-				x = 16
+				x = 17
 				y = @1947
 			}
 		}
@@ -4887,7 +4887,7 @@ technologies = {
 		folder = {
 			name = ger_armour_folder
 			position = {
-				x = 19
+				x = 20
 				y = @1944
 			}
 		}
@@ -4917,7 +4917,7 @@ technologies = {
 		folder = {
 			name = ger_armour_folder
 			position = {
-				x = 19
+				x = 20
 				y = @1947
 			}
 		}
