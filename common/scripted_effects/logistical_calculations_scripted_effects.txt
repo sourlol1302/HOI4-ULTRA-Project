@@ -51,26 +51,25 @@ set_weapon_transports_techs = {
 		text = {
 			set_technology  = { light_weapon_transports_[LEVEL] = 1 popup = no }
 		}
-		
-		LEVEL = [light_weapon_transports]
+		LEVEL = [light_weapon_transports_level]
 	}
 	meta_effect = {
 		text = {
 			set_technology  = { heavy_weapon_transports_[LEVEL] = 1 popup = no }
 		}
-		LEVEL = [heavy_weapon_transports]
+		LEVEL = [heavy_weapon_transports_level]
 	}
 	meta_effect = {
 		text = {
 			set_technology  = { mot_weapon_transports_[LEVEL] = 1 popup = no }
 		}
-		LEVEL = [mot_weapon_transports]
+		LEVEL = [mot_weapon_transports_level]
 	}
 	meta_effect = {
 		text = {
 			set_technology  = { sup_weapon_transports_[LEVEL] = 1 popup = no }
 		}
-		LEVEL = [sup_weapon_transports]
+		LEVEL = [sup_weapon_transports_level]
 	}
 }
 

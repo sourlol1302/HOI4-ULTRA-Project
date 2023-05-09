@@ -41,121 +41,121 @@ scripted_gui = {
 		}
 		effects = {
 			light_weapon_transports_none_button_click = {
-				set_variable = { light_weapon_transports = 1 }
+				set_variable = { light_weapon_transports_level = 1 }
 				logistical_calculations = yes
 				on_daily_labour_calculations = yes
 				add_command_power = @CP_COST
 			}
 			light_weapon_transports_only_very_heavy_button_click = {
-				set_variable = { light_weapon_transports = 2 }
+				set_variable = { light_weapon_transports_level = 2 }
 				logistical_calculations = yes
 				on_daily_labour_calculations = yes
 				add_command_power = @CP_COST
 			}
 			light_weapon_transports_all_very_heavy_button_click = {
-				set_variable = { light_weapon_transports = 3 }
+				set_variable = { light_weapon_transports_level = 3 }
 				logistical_calculations = yes
 				on_daily_labour_calculations = yes
 				add_command_power = @CP_COST
 			}
 			light_weapon_transports_heavy_and_light_button_click = {
-				set_variable = { light_weapon_transports = 4 }
+				set_variable = { light_weapon_transports_level = 4 }
 				logistical_calculations = yes
 				on_daily_labour_calculations = yes
 				add_command_power = @CP_COST
 			}
 			light_weapon_transports_all_button_click = {
-				set_variable = { light_weapon_transports = 5 }
+				set_variable = { light_weapon_transports_level = 5 }
 				logistical_calculations = yes
 				on_daily_labour_calculations = yes
 				add_command_power = @CP_COST
 			}
 			heavy_weapon_transports_none_button_click = {
-				set_variable = { heavy_weapon_transports = 1 }
+				set_variable = { heavy_weapon_transports_level = 1 }
 				logistical_calculations = yes
 				on_daily_labour_calculations = yes
 				add_command_power = @CP_COST
 			}
 			heavy_weapon_transports_only_very_heavy_button_click = {
-				set_variable = { heavy_weapon_transports = 2 }
+				set_variable = { heavy_weapon_transports_level = 2 }
 				logistical_calculations = yes
 				on_daily_labour_calculations = yes
 				add_command_power = @CP_COST
 			}
 			heavy_weapon_transports_all_very_heavy_button_click = {
-				set_variable = { heavy_weapon_transports = 3 }
+				set_variable = { heavy_weapon_transports_level = 3 }
 				logistical_calculations = yes
 				on_daily_labour_calculations = yes
 				add_command_power = @CP_COST
 			}
 			heavy_weapon_transports_heavy_and_light_button_click = {
-				set_variable = { heavy_weapon_transports = 4 }
+				set_variable = { heavy_weapon_transports_level = 4 }
 				logistical_calculations = yes
 				on_daily_labour_calculations = yes
 				add_command_power = @CP_COST
 			}
 			heavy_weapon_transports_all_button_click = {
-				set_variable = { heavy_weapon_transports = 5 }
+				set_variable = { heavy_weapon_transports_level = 5 }
 				logistical_calculations = yes
 				on_daily_labour_calculations = yes
 				add_command_power = @CP_COST
 			}
 			mot_weapon_transports_none_button_click = {
-				set_variable = { mot_weapon_transports = 1 }
+				set_variable = { mot_weapon_transports_level = 1 }
 				logistical_calculations = yes
 				on_daily_labour_calculations = yes
 				add_command_power = @CP_COST
 			}
 			mot_weapon_transports_only_very_heavy_button_click = {
-				set_variable = { mot_weapon_transports = 2 }
+				set_variable = { mot_weapon_transports_level = 2 }
 				logistical_calculations = yes
 				on_daily_labour_calculations = yes
 				add_command_power = @CP_COST
 			}
 			mot_weapon_transports_all_very_heavy_button_click = {
-				set_variable = { mot_weapon_transports = 3 }
+				set_variable = { mot_weapon_transports_level = 3 }
 				logistical_calculations = yes
 				on_daily_labour_calculations = yes
 				add_command_power = @CP_COST
 			}
 			mot_weapon_transports_heavy_and_light_button_click = {
-				set_variable = { mot_weapon_transports = 4 }
+				set_variable = { mot_weapon_transports_level = 4 }
 				logistical_calculations = yes
 				on_daily_labour_calculations = yes
 				add_command_power = @CP_COST
 			}
 			mot_weapon_transports_all_button_click = {
-				set_variable = { mot_weapon_transports = 5 }
+				set_variable = { mot_weapon_transports_level = 5 }
 				logistical_calculations = yes
 				on_daily_labour_calculations = yes
 				add_command_power = @CP_COST
 			}
 			sup_weapon_transports_none_button_click = {
-				set_variable = { sup_weapon_transports = 1 }
+				set_variable = { sup_weapon_transports_level = 1 }
 				logistical_calculations = yes
 				on_daily_labour_calculations = yes
 				add_command_power = @CP_COST
 			}
 			sup_weapon_transports_only_very_heavy_button_click = {
-				set_variable = { sup_weapon_transports = 2 }
+				set_variable = { sup_weapon_transports_level = 2 }
 				logistical_calculations = yes
 				on_daily_labour_calculations = yes
 				add_command_power = @CP_COST
 			}
 			sup_weapon_transports_all_very_heavy_button_click = {
-				set_variable = { sup_weapon_transports = 3 }
+				set_variable = { sup_weapon_transports_level = 3 }
 				logistical_calculations = yes
 				on_daily_labour_calculations = yes
 				add_command_power = @CP_COST
 			}
 			sup_weapon_transports_heavy_and_light_button_click = {
-				set_variable = { sup_weapon_transports = 4 }
+				set_variable = { sup_weapon_transports_level = 4 }
 				logistical_calculations = yes
 				on_daily_labour_calculations = yes
 				add_command_power = @CP_COST
 			}
 			sup_weapon_transports_all_button_click = {
-				set_variable = { sup_weapon_transports = 5 }
+				set_variable = { sup_weapon_transports_level = 5 }
 				logistical_calculations = yes
 				on_daily_labour_calculations = yes
 				add_command_power = @CP_COST
