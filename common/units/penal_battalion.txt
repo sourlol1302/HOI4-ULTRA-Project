@@ -19,6 +19,7 @@ sub_units = {
 		categories = {
 			#category_support_battalions #To prevent Integrated Support doctrines making them extremely good
 			category_army
+			category_sup_logistics
 		}
 
 	

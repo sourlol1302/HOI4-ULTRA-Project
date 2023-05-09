@@ -21,6 +21,7 @@ sub_units = {
 			category_army
 			category_td
 			category_at
+			category_mot_logistics
 		}
 
 		combat_width = 2
@@ -124,6 +125,7 @@ sub_units = {
 			category_army
 			category_td
 			category_at
+			category_mot_logistics
 		}
 
 
@@ -229,6 +231,7 @@ sub_units = {
 			category_army
 			category_td
 			category_at
+			category_mot_logistics
 		}
 
 

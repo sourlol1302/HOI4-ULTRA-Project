@@ -70,6 +70,7 @@ sub_units = {
 			category_support_battalions
 			category_army
 			category_aa
+			category_mot_logistics
 		}
 
 		combat_width = 0

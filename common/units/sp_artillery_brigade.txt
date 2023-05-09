@@ -21,6 +21,7 @@ sub_units = {
 			category_artillery
 			category_front_line
 			category_line_artillery
+			category_mot_logistics
 		}		
 
 		combat_width = 0
@@ -124,6 +125,7 @@ sub_units = {
 			category_artillery
 			category_front_line
 			category_line_artillery
+			category_mot_logistics
 		}		
 		combat_width = 0
 
@@ -227,6 +229,7 @@ sub_units = {
 			category_artillery
 			category_front_line
 			category_line_artillery
+			category_mot_logistics
 		}
 
 		combat_width = 0
@@ -328,6 +331,7 @@ sub_units = {
 			category_all_armor
 			category_army
 			category_tanks
+			category_mot_logistics
 			
 		}
 
@@ -420,6 +424,7 @@ sub_units = {
 			category_all_armor
 			category_army
 			category_tanks
+			category_mot_logistics
 			
 		}
 

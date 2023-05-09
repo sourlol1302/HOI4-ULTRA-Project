@@ -19,6 +19,7 @@ sub_units = {
 			category_army
 			category_line_artillery
 			category_artillery
+			category_heavy_logistics
 		}
 
 		combat_width = 0
@@ -118,6 +119,7 @@ sub_units = {
 			category_army
 			category_line_artillery
 			category_artillery
+			category_mot_logistics
 		}
 
 		combat_width = 0
@@ -209,6 +211,7 @@ sub_units = {
 			category_army
 			category_line_artillery
 			category_artillery
+			category_heavy_logistics
 		}		
 
 		combat_width = 0
@@ -298,6 +301,7 @@ sub_units = {
 			category_army
 			category_line_artillery
 			category_artillery
+			category_mot_logistics
 		}
 
 		combat_width = 0
@@ -399,6 +403,7 @@ sub_units = {
 			category_army
 			category_line_artillery
 			category_artillery
+			category_mot_logistics
 		}
 
 		combat_width = 0
@@ -499,6 +504,7 @@ sub_units = {
 			category_army
 			category_line_artillery
 			category_artillery
+			category_mot_logistics
 		}		
 
 		combat_width = 0
@@ -594,6 +600,7 @@ sub_units = {
 			category_army
 			category_line_artillery
 			category_artillery
+			category_mot_logistics
 		}		
 
 		combat_width = 0

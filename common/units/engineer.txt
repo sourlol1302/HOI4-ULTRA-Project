@@ -20,6 +20,7 @@ sub_units = {
 			category_support_battalions
 			category_army
 			category_all_infantry
+			category_sup_logistics
 		}
 
 	
