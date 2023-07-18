@@ -493,12 +493,13 @@ NDefines.NSupply.SUPPLY_FLOW_DROP_REDUCTION_AT_MAX_INFRA = 0.50 -- 0.30 -- max i
 NDefines.NSupply.SUPPLY_FLOW_PENALTY_CROSSING_RIVERS = 0.10 -- 0.20 -- crossing rivers introduces additional penalty
 NDefines.NSupply.SUPPLY_FLOW_DIST_LOGISTICS_FALLOFF_K = 1.3 -- How steep the curve is
 NDefines.NSupply.SUPPLY_FLOW_DIST_LOGISTICS_FALLOFF_MIN_PENALTY_SCALE = 0.05 -- 0.25 Logistics curve never reduces penalty facor below this limit
-NDefines.NSupply.SUPPLY_NODE_MIN_SUPPLY_THRESHOLD = 0.5 --  1.0 -- if supply of a node is below this value it will be set to 0 -- Currently unused?
+NDefines.NSupply.SUPPLY_NODE_MIN_SUPPLY_THRESHOLD = 0.0 --  1.0 -- if supply of a node is below this value it will be set to 0 -- Currently unused?
+NDefines.NSupply.SUPPLY_DISRUPTION_DAILY_RECOVERY = 150		-- every day nodes recover this much of their accumulated disruption.
 NDefines.NSupply.VP_TO_SUPPLY_BASE = 0.0							-- 0.2 -- Bonus to supply from a VP, no matter the level
 NDefines.NSupply.VP_TO_SUPPLY_BONUS_CONVERSION = 0.02			-- 0.05 -- Bonus to supply local supplies from Victory Points, multiplied by this aspect and rounded to closest integer
 NDefines.NSupply.SUPPLY_FROM_DAMAGED_INFRA = 0.0                -- 0.15 -- damaged infrastructure counts as this in supply calcs
 NDefines.NSupply.SUPPLY_BASE_MULT = 0.0							-- 0.2 - multiplier on supply base values
-NDefines.NSupply.SUPPLY_FLOW_REDUCTION_THRESHOLD = 0.02 -- 0.1 -- if supply flow is lower than this, it is not applied
+NDefines.NSupply.SUPPLY_FLOW_REDUCTION_THRESHOLD = 0.00 -- 0.1 -- if supply flow is lower than this, it is not applied
 NDefines.NSupply.ARMY_SUPPLY_RATIO_SPEED_GAIN_PER_HOUR = 0.04
 NDefines.NSupply.ARMY_MAX_SUPPLY_RATIO_GAIN_PER_HOUR = 1 -- 0.15 the idea is to reduce the rate of supply drop-off when out of supply
 NDefines.NSupply.DAYS_TO_START_GIVING_SUPPLY_AFTER_MOVING_SUPPLY_CAPITAL = 1  --7 all supply doesn't really come from the capital -- the country will start gaining supply after this many days moving its capital
@@ -685,9 +686,24 @@ NDefines.NCountry.AIR_SUPPLY_DROP_EXPIRATION_HOURS = 120  --168            -- Ai
 
 -- logistic strikes
 
-NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_TRUCK_DAMAGE_FACTOR = 0.125
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_TRUCK_DAMAGE_FACTOR = 0.15
 NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_INFRA_DAMAGE_SPILL_FACTOR = 0.001
 NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_TRAIN_DAMAGE_FACTOR = 0.025
+
+-- New
+
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_NO_TRUCK_DISRUPTION_FACTOR = 0.001 				-- If a unit isn't motorized, still disrupt its supply by damage * this
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_TRAIN_DAMAGE_DISRUPTION_MITIGATION = 6.0 		-- Multiply Train Damage by (Smooth / (Smooth + (Disruption * Mitigation)))
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_TRAIN_DAMAGE_DISRUPTION_SMOOTHING = 5
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_RAILWAY_DAMAGE_SPILL_FACTOR = 0.01				-- Portion of train damage to additionally deal to railways
+
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_DISRUPTION_MIN_DAMAGE_FACTOR = 0.1				-- Multiply train damage by this factor, scale from 1.0 at 0 disruption to this at AIR_WING_ATTACK_LOGISTICS_MAX_DISRUPTION_DAMAGE_TO_CONSIDER
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_MAX_DISRUPTION_DAMAGE_TO_CONSIDER = 15.0 		-- see above
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_DIRECT_DISRUPTION_DAMAGE_FACTOR = 0.001			-- Disruption damage to supply throughput done by bombing damage, not dependant on killing trains which also causes diruption.
+
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_TRUCK_MAX_FACTOR = 15	 						-- max trucks we can destroy in one instance of a logistics strike
+
+-----
 
 NDefines.NAir.MAX_QUICK_WING_SELECTION = 5
 
